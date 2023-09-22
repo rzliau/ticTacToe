@@ -1,9 +1,12 @@
 {
+  "homepage": "https://rzliau.github.io/ticTacToe",
   "name": "tictactoe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -12,6 +15,7 @@
   "dependencies": {
     "@react-three/drei": "^9.84.2",
     "@react-three/fiber": "^8.14.2",
+    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.156.1"
