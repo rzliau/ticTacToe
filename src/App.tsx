@@ -272,7 +272,7 @@ const Game: React.FC = () => {
   if (hasNull){
     status = "\nNext Player: " + (xIsNext ? 'x' : 'o');
   } else {
-    status = "\nWinner is: " + (winCounts[0] > winCounts[1] ? 'x' : 'o');
+    status = winCounts[0] == winCounts[1] ? "Tied" : "\nWinner is: " + (winCounts[0] > winCounts[1] ? 'x' : 'o');
   }
 
   const handlePlay = (nextCubes: Player[][][]) => {
